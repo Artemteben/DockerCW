@@ -23,7 +23,7 @@ def send_message_to_user():
         try:
             with (
                 transaction.atomic()
-            ):  # ипсользуем для того чтобы при выполнении условия гаратированы были занесены изменения в бд или не занесены без промежуточных вариантов
+            ):
                 # Если `next_reminder_date` не установлена, инициализируем её на текущую дату
                 if not habit.next_reminder_date:
                     habit.next_reminder_date = current_date
@@ -36,7 +36,8 @@ def send_message_to_user():
                     if habit.owner.tg_chat_id:
                         message = (
                             f"Напоминание: сегодня выполнение привычки '{habit.habit}'! "
-                            f"Место: {habit.place_of_execution or 'не указано'}, время: {habit.time_execution or 'в любое время'}."
+                            f"Место: {habit.place_of_execution or 'не указано'}, "
+                            f"время: {habit.time_execution or 'в любое время'}."
                         )
                         send_telegram_message(
                             message=message, chat_id=habit.owner.tg_chat_id
