@@ -13,3 +13,4 @@
 *_LOCAL_*.txt
 *_REMOTE_*.txt
 .idea/
+!/.env
