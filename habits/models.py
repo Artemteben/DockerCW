@@ -41,7 +41,7 @@ class Habit(models.Model):
         **NULLABLE,
         related_name="related_habits",
     )
-    reward = models.CharField(verbose_name="Вознаграждение за привычку", **NULLABLE)
+    reward = models.CharField(max_length=255, verbose_name="Вознаграждение за привычку", **NULLABLE)
 
     STATUS_PUBLISHED = [
         ("Опубликован", "Опубликован"),
