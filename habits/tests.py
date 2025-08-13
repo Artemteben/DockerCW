@@ -110,7 +110,7 @@ class HabitTest(APITestCase):
         """
         получения списка привычек
         """
-        url = "habits/user-habits-list/"
+        url = reverse("habits:user_habits_list")
 
         response = self.client.get(url)
 
