@@ -36,6 +36,7 @@ class HabitTest(APITestCase):
             "results": [
                 {
                     "id": self.habit.id,
+                    'next_reminder_date': None,
                     "time_to_complete": "00:02:00",
                     "periodicity": 1,
                     "habit": "test полезная привычка",
@@ -109,7 +110,7 @@ class HabitTest(APITestCase):
         """
         получения списка привычек
         """
-        url = "/user-habits-list/"
+        url = "habits/user-habits-list/"
 
         response = self.client.get(url)
 
