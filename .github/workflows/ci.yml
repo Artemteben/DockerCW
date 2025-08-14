@@ -78,7 +78,7 @@ jobs:
 
       - name: Deploy to server
         run: |
-          sshpass -p root ssh -v -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} "cd dockercw/ && git pull" << 'EOF'
+          sshpass -p root ssh -v -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} "cd ~/dockercw/dockercw && git pull" << 'EOF'
           docker compose down
           docker container prune -f
           docker image prune -f
