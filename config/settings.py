@@ -9,9 +9,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
 
 SECRET_KEY = os.getenv("SECRET_KEY")
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['51.250.33.202', 'localhost']
+ALLOWED_HOSTS = ['51.250.33.202', 'localhost', '127.0.0.1', 'testserver']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 INSTALLED_APPS = [
