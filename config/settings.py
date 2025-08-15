@@ -10,9 +10,10 @@ load_dotenv(BASE_DIR / ".env")
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [['51.250.33.202', 'localhost']]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -115,7 +116,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = "static/"
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
