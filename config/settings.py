@@ -143,10 +143,9 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
 ]
-
 CSRF_TRUSTED_ORIGINS = [
-    "https://read-and-write.example.com",  # Замените на адрес вашего фронтенд-сервера
-    # и добавьте адрес бэкенд-сервера
+    "http://51.250.33.202",
+    "https://51.250.33.202",
 ]
 
 CORS_ALLOW_ALL_ORIGINS = False
